@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 43% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 43% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 43% 20%;
+
+    /* Brand Blue #314D7C */
+    --primary: 213 43% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Brand Yellow #ECB201 */
+    --accent: 45 99% 46%;
+    --accent-foreground: 213 43% 34%;
+
+    --secondary: 213 20% 95%;
+    --secondary-foreground: 213 43% 34%;
+
+    --muted: 213 20% 96%;
+    --muted-foreground: 213 20% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 20% 90%;
+    --input: 213 20% 90%;
+    --ring: 213 43% 34%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(213 43% 34% / 0.95), hsl(213 43% 25% / 0.95));
+    --gradient-accent: linear-gradient(135deg, hsl(45 99% 46%), hsl(45 99% 56%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(213 43% 34% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(213 43% 34% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(213 43% 34% / 0.15);
+    --shadow-accent: 0 4px 14px 0 hsl(45 99% 46% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

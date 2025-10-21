@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { Sparkles, Users, Shield, Award } from 'lucide-react';
+import { Sparkles, Users, Shield } from 'lucide-react';
 import { Card } from '../components/ui/card';
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl font-bold mb-4 text-[#ECB201]">{t('about.title')}</h1>
+          <h1 className="text-5xl font-bold mb-4 text-primary">{t('about.title')}</h1>
           <p className="text-xl text-muted-foreground">{t('about.subtitle')}</p>
         </div>
 
@@ -48,7 +48,7 @@ const About = () => {
         </div>
 
         {/* Stats */}
-        <div className="bg-primary text-[#ECB201]-foreground rounded-lg p-12">
+        <div className="bg-primary text-primary-foreground rounded-lg p-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-5xl font-bold mb-2 text-accent">10+</div>

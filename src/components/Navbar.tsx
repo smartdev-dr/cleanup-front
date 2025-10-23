@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,18 +55,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background shadow-md py-3' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background shadow-md py-3' : 'bg-transparent py-6'
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">
-              Cleanup
-            </div>
-          </button>
+          <Link to="/" >
+            <button onClick={() => scrollToSection('home')} className="flex items-center">
+              <img src="/logo.png" alt="Cleanup Logo" className="h-auto w-40" />
+            </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -73,18 +73,17 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`text-sm font-bold transition-colors hover:text-primary ${
-                  activeSection === link.id
+                className={`text-sm font-bold transition-colors hover:text-primary ${activeSection === link.id
                     ? 'text-[#314D7C]'
                     : isScrolled
-                    ? 'text-foreground'
-                    : 'text-white'
-                }`}
+                      ? 'text-foreground'
+                      : 'text-white'
+                  }`}
               >
                 {link.label}
               </button>
             ))}
-            
+
             {/* Language Toggle */}
             <Button
               variant="ghost"
@@ -103,9 +102,9 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className={`h-6 w-6 ${!isScrolled && 'text-white'}`} />
+              <X className={`h-6 w-6 ${!isScrolled && 'text-[#ECB201]'}`} />
             ) : (
-              <Menu className={`h-6 w-6 ${!isScrolled && 'text-white'}`} />
+              <Menu className={`h-6 w-6 ${!isScrolled && 'text-[#ECB201]'}`} />
             )}
           </button>
         </div>
@@ -118,13 +117,12 @@ const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className={`text-sm font-medium transition-colors hover:text-primary text-left ${
-                    activeSection === link.id
+                  className={`text-sm font-medium transition-colors hover:text-primary text-left ${activeSection === link.id
                       ? 'text-primary'
                       : isScrolled
-                      ? 'text-foreground'
-                      : 'text-white'
-                  }`}
+                        ? 'text-foreground'
+                        : 'text-white'
+                    }`}
                 >
                   {link.label}
                 </button>

@@ -104,8 +104,8 @@ const Home = () => {
         }}
       >
         {/* Overlay oscuro */}
-        <div className="absolute inset-0 bg-black/60 z-10" />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        {/* <div className="absolute inset-0 bg-gradient-hero"></div> */}
         <div className="relative z-10 text-center text-white px-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             {t('hero.title')}
@@ -344,7 +344,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Email</h3>
-                  <p className="text-muted-foreground">cleanup.com.do</p>
+                  <p className="text-muted-foreground">info@cleanup.com.do</p>
                 </div>
               </Card>
 
@@ -354,7 +354,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+1 (809) 123-4567</p>
+                  <p className="text-muted-foreground">+1 (809) 889-0448</p>
                 </div>
               </Card>
 
@@ -365,6 +365,7 @@ const Home = () => {
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Location</h3>
                   <p className="text-muted-foreground">Dominican Republic</p>
+                  <p className="text-muted-foreground">Punta Cana</p>
                 </div>
               </Card>
 

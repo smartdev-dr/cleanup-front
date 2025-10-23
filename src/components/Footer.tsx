@@ -11,15 +11,20 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Tagline */}
-          <div>
-            <div className="text-2xl font-bold mb-2">Cleanup</div>
-            <p className="text-sm opacity-90">{t('footer.tagline')}</p>
-          </div>
+          <Link to="/" >
+            <div>
+              <img src="/logo.png" alt="Cleanup Logo" className="h-auto w-40" />
+              <p className="text-sm opacity-90">{t('footer.tagline')}</p>
+            </div>
+          </Link>
 
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col space-y-2">
+              <Link to="/about" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+                {t('nav.home')}
+              </Link>
               <Link to="/about" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
                 {t('nav.about')}
               </Link>
@@ -37,7 +42,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">{t('footer.follow')}</h3>
             <div className="flex space-x-4 mb-4">
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/cleanup05"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
@@ -45,7 +50,7 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/cleanup_pc/?igsh=cWVvczRoNGhuamgx#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
@@ -54,11 +59,11 @@ const Footer = () => {
               </a>
             </div>
             <a
-              href="mailto:cleanup.com.do"
+              href="mailto:info@cleanup.com.do"
               className="flex items-center text-sm opacity-90 hover:opacity-100 transition-opacity"
             >
               <Mail className="h-4 w-4 mr-2" />
-              cleanup.com.do
+              info@cleanup.com.do
             </a>
           </div>
         </div>
@@ -68,6 +73,11 @@ const Footer = () => {
           <p className="text-sm opacity-90">
             © {currentYear} Cleanup. {t('footer.rights')}
           </p>
+          <a href='https://smartdev.com.do/' target='_blank' rel='noopener noreferrer' className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+            <p className="text-xs opacity-90">
+              Developed by Smartdev.com.do
+            </p>
+          </a>
         </div>
       </div>
     </footer>

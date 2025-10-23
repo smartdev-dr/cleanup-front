@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
   
   const handleWhatsAppClick = () => {
     // Replace with actual WhatsApp number
-    window.open('https://wa.me/18091234567', '_blank');
+    window.open('https://wa.me/18098890448', '_blank');
   };
 
   return (

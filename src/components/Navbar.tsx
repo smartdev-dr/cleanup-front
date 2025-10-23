@@ -50,7 +50,7 @@ const Navbar = () => {
   ];
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'es' : 'en');
+    setLanguage(language === 'es' ? 'en' : 'es');
   };
 
   return (

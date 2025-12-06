@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  
+  darkMode: ["class", "string"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
@@ -87,5 +87,6 @@ export default {
       },
     },
   },
-  
+  //@ts-ignore
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
